@@ -1,4 +1,4 @@
-package com.example.pw5.retrofit
+package com.example.pw6.retrofit
 
 import retrofit2.http.GET
 import retrofit2.http.Path

@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/mainContentFragment"
-        android:name="com.example.pw5.fragments.MainContentFragment"
+        android:name="com.example.pw6.fragments.MainContentFragment"
         android:label=""
         tools:layout="@layout/fragment_main_content" >
         <action
@@ -16,7 +16,7 @@
     </fragment>
     <fragment
         android:id="@+id/listFromDBFragment"
-        android:name="com.example.pw5.fragments.ListFromDBFragment"
+        android:name="com.example.pw6.fragments.ListFromDBFragment"
         android:label=""
         tools:layout="@layout/fragment_list_from_d_b" >
         <action

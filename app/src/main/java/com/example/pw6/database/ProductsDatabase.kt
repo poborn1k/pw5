@@ -1,4 +1,4 @@
-package com.example.pw5.database
+package com.example.pw6.database
 
 import android.content.Context
 import androidx.room.Database
@@ -29,6 +29,5 @@ abstract class ProductsDatabase: RoomDatabase() {
         }
     }
 
-    abstract fun amazonProductDao(): ProductDao
-
+    abstract fun productDao(): ProductDao
 }

@@ -1,4 +1,4 @@
-package com.example.pw5
+package com.example.pw6
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4

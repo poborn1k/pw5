@@ -1,4 +1,4 @@
-package com.example.pw5.database
+package com.example.pw6.database
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey

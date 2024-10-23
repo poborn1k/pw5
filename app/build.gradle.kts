@@ -5,11 +5,11 @@ plugins {
 }
 
 android {
-    namespace = "com.example.pw5"
+    namespace = "com.example.pw6"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.example.pw5"
+        applicationId = "com.example.pw6"
         minSdk = 24
         targetSdk = 34
         versionCode = 1
@@ -60,6 +60,14 @@ dependencies {
     // glide (photo-url)
     implementation("com.github.bumptech.glide:glide:4.13.2")
     annotationProcessor("com.github.bumptech.glide:compiler:4.13.2")
+
+    // koin (di)
+    val koin_version = "3.2.0-beta-1"
+    implementation("io.insert-koin:koin-core:$koin_version")
+    implementation("io.insert-koin:koin-android:$koin_version")
+    implementation("io.insert-koin:koin-android:3.2.0")
+    testImplementation("io.insert-koin:koin-test-junit4:$koin_version")
+
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)

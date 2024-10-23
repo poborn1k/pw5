@@ -1,19 +1,16 @@
-package com.example.pw5.adapter
+package com.example.pw6.adapter
 
-import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
-import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
-import com.example.pw5.R
-import com.example.pw5.database.Product
-import kotlinx.coroutines.withContext
+import com.example.pw6.R
+import com.example.pw6.database.Product
 
-class ListAdapter(): RecyclerView.Adapter<com.example.pw5.adapter.ListAdapter.MyViewHolder>() {
+class ListAdapter(): RecyclerView.Adapter<com.example.pw6.adapter.ListAdapter.MyViewHolder>() {
     private var productList: List<Product> = emptyList()
 
     class MyViewHolder(itemView: View): RecyclerView.ViewHolder(itemView) {

@@ -1,22 +1,23 @@
-package com.example.pw5.fragments
+package com.example.pw6.fragments
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.pw5.R
-import com.example.pw5.adapter.ListAdapter
-import com.example.pw5.database.ProductViewModel
-import com.example.pw5.databinding.FragmentListFromDBBinding
-import com.example.pw5.databinding.FragmentMainContentBinding
+import androidx.recyclerview.widget.RecyclerView
+import com.example.pw6.adapter.ListAdapter
+import com.example.pw6.database.ProductViewModel
+import com.example.pw6.databinding.FragmentListFromDBBinding
+import org.koin.android.ext.android.inject
 
 class ListFromDBFragment : Fragment() {
     private lateinit var binding: FragmentListFromDBBinding
-    private lateinit var viewModel: ProductViewModel
+    private val viewModel: ProductViewModel by viewModels<ProductViewModel>()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -32,12 +33,9 @@ class ListFromDBFragment : Fragment() {
         recyclerView.adapter = adapter
         recyclerView.layoutManager = LinearLayoutManager(requireContext())
 
-        viewModel = ViewModelProvider(this).get(ProductViewModel::class.java)
         viewModel.readAllData.observe(viewLifecycleOwner, Observer { product ->
             adapter.setData(product)
         })
-
-
     }
 
     companion object {

@@ -1,4 +1,4 @@
-package com.example.pw5.retrofit
+package com.example.pw6.retrofit
 
 data class ProductJSON (
     val title: String,

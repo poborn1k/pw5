@@ -1,4 +1,4 @@
-package com.example.pw5.database
+package com.example.pw6.database
 
 import android.app.Application
 import androidx.lifecycle.AndroidViewModel
@@ -10,7 +10,7 @@ import kotlinx.coroutines.launch
 class ProductViewModel(application: Application): AndroidViewModel(application) {
     val readAllData: LiveData<List<Product>>
     private val repository: ProductRepository =
-        ProductRepository(ProductsDatabase.getDatabase(application).amazonProductDao())
+        ProductRepository(ProductsDatabase.getDatabase(application).productDao())
 
     init {
         readAllData = repository.readAllData
